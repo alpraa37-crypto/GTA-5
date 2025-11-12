@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل GTA 5 للموبايل - شركة أنس وبراءة العربية لتطوير التكنولوجيا</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --secondary: #004E89;
+            --accent1: #00A6A6;
+            --accent2: #F18F01;
+            --accent3: #C1292E;
+            --dark: #1A1A2E;
+            --light: #F7F7F7;
+            --gradient: linear-gradient(135deg, #FF6B35, #F18F01, #00A6A6, #004E89);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-left: 15px;
+            border: 2px solid var(--accent2);
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .partner {
+            font-size: 0.9rem;
+            color: var(--accent2);
+            margin-top: 5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: var(--accent2);
+            color: var(--dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.9)), url('https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            padding: 20px;
+        }
+        
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.4s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: var(--gradient);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: transform 0.5s;
+        }
+        
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s;
+            border-top: 5px solid;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .feature:nth-child(1) {
+            border-color: var(--primary);
+        }
+        
+        .feature:nth-child(2) {
+            border-color: var(--accent1);
+        }
+        
+        .feature:nth-child(3) {
+            border-color: var(--accent2);
+        }
+        
+        .feature:nth-child(4) {
+            border-color: var(--accent3);
+        }
+        
+        .feature i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+        
+        /* Game Info Section */
+        .game-info {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .game-info h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: var(--accent2);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .info-item {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .info-item i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--accent2);
+        }
+        
+        .info-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            color: var(--accent1);
+        }
+        
+        /* Article Section */
+        .article {
+            background: white;
+            padding: 60px 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 60px;
+            line-height: 1.8;
+        }
+        
+        .article h3 {
+            color: var(--secondary);
+            margin: 30px 0 15px;
+            font-size: 1.8rem;
+            border-right: 5px solid var(--accent2);
+            padding-right: 15px;
+        }
+        
+        .article h3:first-child {
+            margin-top: 0;
+        }
+        
+        .article p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+        
+        .article-img {
+            width: 100%;
+            margin: 30px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .article-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .article-img img:hover {
+            transform: scale(1.03);
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #FF6B35, #F18F01);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+        
+        .download-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .download-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #555;
+        }
+        
+        /* Privacy Policy */
+        .privacy-policy {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 60px;
+        }
+        
+        .privacy-policy h3 {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            font-size: 1.6rem;
+        }
+        
+        .privacy-policy h3:first-child {
+            margin-top: 0;
+        }
+        
+        .privacy-policy ul {
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .privacy-policy li {
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            min-width: 250px;
+            transition: transform 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .contact-item i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--accent2);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links ul li a:hover {
+            color: var(--accent2);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+                justify-content: center;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                height: 60vh;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .about, .privacy-policy, .article {
+                padding: 30px;
+            }
+            
+            .content-section {
+                padding: 50px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                width: 95%;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .about, .privacy-policy, .article {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/60" alt="شعار الشركة">
+                    <div>
+                        <h1>شركة أنس وبراءة العربية لتطوير التكنولوجيا</h1>
+                        <div class="partner">بالشراكة مع قناة <strong>البرمجة في دقائق</strong></div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#features">مميزات اللعبة</a></li>
+                        <li><a href="#article">مقال</a></li>
+                        <li><a href="#privacy">سياسة الخصوصية</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>GTA 5 للموبايل - النسخة الكاملة</h2>
+            <p>استمتع بتجربة GTA 5 الكاملة على هاتفك المحمول الآن! النسخة الأصلية مع جميع الميزات والمهام.</p>
+            <a href="#download" class="btn">تحميل اللعبة الآن</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- About Section -->
+        <section class="content-section" id="about">
+            <div class="section-title">
+                <h2>من نحن</h2>
+            </div>
+            <div class="about">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>شركة أنس وبراءة العربية لتطوير التكنولوجيا</h3>
+                        <p>نحن شركة رائدة في مجال التطوير التكنولوجي والبرمجيات في العالم العربي. تأسست الشركة برؤية طموحة لتقديم أحدث الحلول التكنولوجية للمستخدمين العرب بجودة عالية وسهولة في الاستخدام.</p>
+                        <p>تعمل شركتنا بالتعاون الوثيق مع قناة <strong>"البرمجة في دقائق"</strong> التعليمية الرائدة في مجال البرمجة وتطوير التطبيقات، حيث نعمل معاً على تقديم محتوى تقني متميز يلبي احتياجات المستخدم العربي.</p>
+                        <p>نفخر بأننا نقدم لعبة GTA 5 للموبايل مجاناً للمستخدمين العرب، حيث قمنا بتطوير نسخة متوافقة تماماً مع أنظمة الهواتف المحمولة مع الحفاظ على جميع ميزات اللعبة الأصلية.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="صورة عن الشركة">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="content-section" id="features">
+            <div class="section-title">
+                <h2>مميزات GTA 5 للموبايل</h2>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>تجربة لعب كاملة</h3>
+                    <p>استمتع بتجربة لعب GTA 5 الكاملة على هاتفك المحمول مع جميع المهام والمغامرات والشخصيات.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>تحسين للشاشات الصغيرة</h3>
+                    <p>واجهة مستخدم محسنة ومصممة خصيصاً للشاشات التي تعمل باللمس مع تحكم سلس وسريع.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>أداء محسن</h3>
+                    <p>تحسينات في الأداء لتشغيل سلس على مختلف أنواع الهواتف الذكية بمختلف إمكانياتها.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-download"></i>
+                    <h3>تحميل مجاني</h3>
+                    <p>قم بتحميل اللعبة مجاناً بالكامل بدون أي رسوم خفية أو متطلبات دفع.</p>
+                </div>
+            </div>
+
+            <!-- Game Info -->
+            <div class="game-info">
+                <h3>معلومات عن اللعبة</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>عالم مفتوح ضخم</h4>
+                        <p>استكشف مدينة لوس سانتوس الواسعة بكل تفاصيلها</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-user-friends"></i>
+                        <h4>شخصيات متعددة</h4>
+                        <p>العب كأحد الشخصيات الثلاثة الرئيسية في القصة</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-car"></i>
+                        <h4>مركبات متنوعة</h4>
+                        <p>اختر من بين المئات من المركبات المختلفة</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-tasks"></i>
+                        <h4>مهام لا تنتهي</h4>
+                        <p>أكثر من 70 مهمة رئيسية ومئات المهام الجانبية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Section -->
+        <section class="content-section" id="article">
+            <div class="section-title">
+                <h2>GTA 5: ثورة في عالم ألعاب الموبايل</h2>
+            </div>
+            <div class="article">
+                <h3>مقدمة عن لعبة GTA 5</h3>
+                <p>جراند ثفت أوتو 5 (GTA V) هي واحدة من أكثر ألعاب الفيديو شهرة ونجاحاً في التاريخ. طورتها شركة روكستار جيمز وأصدرت لأول مرة في عام 2013 لأجهزة البلاي ستيشن 3 وإكس بوكس 360. منذ ذلك الحين، حققت اللعبة نجاحاً هائلاً وأصبحت من أكثر الألعاب مبيعاً حول العالم.</p>
+                
+                <div class="article-img">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="صورة لشخصية من GTA 5">
+                </div>
+                
+                <h3>قصة اللعبة وأبطالها</h3>
+                <p>تدور أحداث GTA 5 في مدينة لوس سانتوس الخيالية، التي تشبه لوس أنجلوس في الواقع. تتبع اللعبة قصة ثلاثة أبطال رئيسيين: مايكل دي سانتا، المتقاعد الذي يحاول الهروب من ماضيه الإجرامي؛ فرانكلين كلينتون، الشاب الطموح الذي يبحث عن فرصته في الحياة؛ وتريفور فيليبس، المجرم غير المتوقع الذي يعيش على حافة الهاوية.</p>
+                
+                <p>ما يميز قصة GTA 5 هو الطريقة المبتكرة التي تسمح للاعب بالتبديل بين هذه الشخصيات الثلاث في أي وقت خلال اللعبة، مما يوفر تجربة لعب ديناميكية ومتنوعة. كل شخصية لها خلفيتها الفريدة، ومهاراتها الخاصة، وحياتها اليومية التي يمكن للاعب استكشافها.</p>
+                
+                <div class="highlight">
+                    <h3>لماذا تعتبر GTA 5 من أفضل الألعاب؟</h3>
+                    <p>GTA 5 ليست مجرد لعبة، بل هي عالم افتراضي كامل يمكن للاعب العيش فيه. من قيادة السيارات والطائرات، إلى ممارسة الرياضات المختلفة، والاستثمار في الأسهم، وحتى مجرد الاستمتاع بالمناظر الطبيعية، تقدم اللعبة تجربة لا مثيل لها في عالم ألعاب الفيديو.</p>
+                </div>
+                
+                <h3>تطور GTA 5 للموبايل</h3>
+                <p>مع التطور الهائل في قدرات الهواتف الذكية والأجهزة اللوحية، أصبح من الممكن نقل تجربة ألعاب الفيديو المعقدة إلى المنصات المحمولة. قامت شركة أنس وبراءة العربية لتطوير التكنولوجيا، بالتعاون مع قناة "البرمجة في دقائق"، بتطوير نسخة متكاملة من GTA 5 للموبايل، مع الحفاظ على جميع ميزات اللعبة الأصلية.</p>
+                
+                <p>لقد استغرقت عملية التطوير أكثر من عامين من العمل الدؤوب، حيث قام فريق التطوير بإعادة بناء المحرك الرسومي للعبة ليتناسب مع إمكانيات الهواتف الذكية، مع الحفاظ على جودة الرسومات والدقة العالية. كما تم تطوير نظام تحكم جديد يناسب الشاشات التي تعمل باللمس، مع إمكانية تخصيص عناصر التحكم حسب تفضيلات اللاعب.</p>
+                
+                <div class="article-img">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="صورة لهاتف محمول يعرض لعبة GTA 5">
+                </div>
+                
+                <h3>ميزات النسخة المحمولة</h3>
+                <p>تتميز نسخة GTA 5 للموبايل بعدة تحسينات وإضافات خاصة:</p>
+                
+                <ul>
+                    <li><strong>نظام تحكم محسن:</strong> تم تصميم واجهة تحكم جديدة بالكامل تناسب الشاشات التي تعمل باللمس، مع إمكانية تخصيص مكان وأحجام أزرار التحكم.</li>
+                    <li><strong>تحسين الأداء:</strong> تم تحسين أداء اللعبة لتعمل بسلاسة على مجموعة واسعة من الأجهزة، من الهواتف المتوسطة إلى الأجهزة flagship.</li>
+                    <li><strong>رسومات مذهلة:</strong> على الرغم من التعديلات، حافظت اللعبة على جودة رسومات عالية مع تفاصيل دقيقة للبيئات والشخصيات.</li>
+                    <li><strong>محتوى إضافي:</strong> تحتوي النسخة المحمولة على بعض المهام والحزم الإضافية الحصرية التي لا تتوفر في النسخ الأخرى.</li>
+                </ul>
+                
+                <h3>كيفية تحميل وتثبيت اللعبة</h3>
+                <p>لتحميل GTA 5 على هاتفك المحمول، ما عليك سوى النقر على زر التحميل في أسفل هذه الصفحة. سيتم توجيهك إلى صفحة التحميل حيث يمكنك اختيار النسخة المناسبة لجهازك (أندرويد أو iOS). يبلغ حجم اللعبة حوالي 3.5 جيجابايت، لذا تأكد من وجود مساحة كافية على جهازك واتصال إنترنت مستقر.</p>
+                
+                <p>بعد التحميل، قم بفتح ملف التثبيت واتبع التعليمات الظاهرة على الشاشة. قد تستغرق عملية التثبيت بضع دقائق حسب سرعة جهازك. بعد الانتهاء من التثبيت، يمكنك فتح اللعبة والبدء في الاستمتاع بتجربة GTA 5 الكاملة على هاتفك المحمول.</p>
+                
+                <div class="highlight">
+                    <h3>ملاحظة هامة</h3>
+                    <p>هذه النسخة من GTA 5 للموبايل مقدمة مجاناً بالكامل من شركة أنس وبراءة العربية لتطوير التكنولوجيا، كجزء من رسالتها لدعم المحتوى العربي التقني. لا توجد أي رسوم خفية أو متطلبات شراء داخل التطبيق.</p>
+                </div>
+                
+                <h3>دعم وتحديثات مستقبلية</h3>
+                <p>تلتزم شركة أنس وبراءة العربية لتطوير التكنولوجيا بدعم هذه النسخة من اللعبة وتقديم التحديثات الدورية التي تشمل إصلاح الأخطاء، إضافة محتوى جديد، وتحسين الأداء. يمكن للاعبين الإبلاغ عن أي مشاكل يواجهونها من خلال قسم "اتصل بنا" في هذا الموقع.</p>
+                
+                <p>كما تخطط الشركة لإصدار تحديث كبير في المستقبل القريب سيضيف ميزات متعددة اللاعبين، allowing players to enjoy the GTA Online experience on their mobile devices.</p>
+                
+                <h3>خاتمة</h3>
+                <p>GTA 5 للموبايل تمثل نقلة نوعية في عالم ألعاب الهواتف الذكية، حيث تثبت أن الألعاب المعقدة والغنية بالمحتوى يمكن أن تعمل بشكل ممتاز على الأجهزة المحمولة. بفضل العمل الدؤوب لفريق التطوير في شركة أنس وبراءة العربية لتطوير التكنولوجيا، يمكن للاعبين العرب الآن الاستمتاع بإحدى أفضل ألعاب الفيديو في التاريخ على هواتفهم، مجاناً وبجودة عالية.</p>
+                
+                <p>نتمنى لكم تجربة لعب ممتعة ومثيرة في عالم لوس سانتوس الواسع! لا تنسوا مشاركة تجربتكم معنا عبر وسائل التواصل الاجتماعي أو من خلال الاتصال بنا مباشرة.</p>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download-section" id="download">
+            <h2>قم بتحميل GTA 5 للموبايل الآن</h2>
+            <p>انقر على الزر أدناه لتحميل النسخة الكاملة من GTA 5 لهاتفك المحمول مجاناً. اللعبة متوافقة مع أجهزة الأندرويد و iOS.</p>
+            <a href="https://www.directforgames.com/2021/12/download-gta-v-android.html" class="btn">تحميل اللعبة الآن</a>
+        </section>
+
+        <!-- Privacy Policy -->
+        <section class="content-section" id="privacy">
+            <div class="section-title">
+                <h2>سياسة الخصوصية</h2>
+            </div>
+            <div class="privacy-policy">
+                <h3>التزامنا بحماية خصوصيتك</h3>
+                <p>في <strong>شركة أنس وبراءة العربية لتطوير التكنولوجيا</strong>، نأخذ خصوصية المستخدمين على محمل الجد ونلتزم بحماية بياناتك الشخصية. تشرح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحماية معلوماتك.</p>
+                
+                <h3>المعلومات التي نجمعها</h3>
+                <p>قد نجمع أنواعاً محدودة من المعلومات لتحسين تجربتك مع خدماتنا:</p>
+                <ul>
+                    <li>معلومات الجهاز (النوع، نظام التشغيل، الإصدار)</li>
+                    <li>معلومات الاستخدام (الصفحات التي تزورها، مدة الزيارة، الأزرار التي تنقر عليها)</li>
+                    <li>معلومات التحميل (لتحسين سرعة التحميل وتجربة المستخدم)</li>
+                    <li>معلومات الطرف الثالث الأساسية (مثل مزود خدمة الإنترنت)</li>
+                </ul>
+                
+                <h3>كيف نستخدم معلوماتك</h3>
+                <p>نستخدم المعلومات التي نجمعها فقط لتحسين جودة خدماتنا وتجربة المستخدم، ولا نقوم بمشاركة أو بيع أي معلومات شخصية لأطراف ثالثة. استخداماتنا تشمل:</p>
+                <ul>
+                    <li>تحسين أداء الموقع وتجربة التحميل</li>
+                    <li>تطوير خدمات جديدة تلبي احتياجات المستخدمين</li>
+                    <li>تحليل أنماط الاستخدام لتحسين المحتوى</li>
+                    <li>الكشف عن ومنع الاحتيال وإساءة الاستخدام</li>
+                </ul>
+                
+                <h3>الحماية والأمان</h3>
+                <p>نستخدم تقنيات تشفير متقدمة لحماية بياناتك من الوصول غير المصرح به، ونلتزم بمعايير الأمان العالمية لحماية معلوماتك. نحن نطبق إجراءات أمنية تقنية وإدارية معقولة لحماية البيانات الشخصية من الوصول غير المصرح به، والاستخدام، أو الكشف.</p>
+                
+                <h3>ملفات تعريف الارتباط (Cookies)</h3>
+                <p>نستخدم ملفات تعريف الارتباط لتخصيص المحتوى والإعلانات، وتوفير ميزات وسائل التواصل الاجتماعي، وتحليل حركة المرور لدينا. يمكنك التحكم في ملفات تعريف الارتباط through your browser settings.</p>
+                
+                <h3>التغييرات على سياسة الخصوصية</h3>
+                <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات جوهرية من خلال نشر الإشعار على موقعنا. ننصحك بمراجعة هذه السياسة بشكل دوري لأي تحديثات.</p>
+                
+                <h3>اتصل بنا</h3>
+                <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا عبر البريد الإلكتروني أو الواتساب المذكورين في قسم "اتصل بنا".</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section" id="contact">
+            <div class="section-title">
+                <h2>اتصل بنا</h2>
+            </div>
+            <div class="contact-info">
+                <p>يسعدنا تواصلكم معنا لأي استفسارات أو دعم فني أو اقتراحات</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>واتساب</h3>
+                        <p>20 10 5 5 8 9 10 20</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>alpraaweed@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>شركة أنس وبراءة العربية لتطوير التكنولوجيا</h3>
+                    <p>بالشراكة مع قناة "البرمجة في دقائق"</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#features">مميزات اللعبة</a></li>
+                        <li><a href="#article">مقال</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>معلومات</h4>
+                    <ul>
+                        <li><a href="#privacy">سياسة الخصوصية</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                        <li><a href="#download">تحميل اللعبة</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2025 لشركة أنس وبراءة العربية لتطوير التكنولوجيا</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
